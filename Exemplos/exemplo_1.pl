@@ -8,3 +8,6 @@ progenitor(pat, jim).
 
 % O primeiro parâmetro é filho do segundo parâmetro, se a condição for satisfeita
 filho(X, Y) :- progenitor(Y, X). % Definição de regra
+
+% Relacionamento de neto e avô
+neto(X, Z) :- progenitor(Y, X), progenitor(Z, Y).
